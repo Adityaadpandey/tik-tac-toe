@@ -1,8 +1,8 @@
-import Test
+# import Test
 import cv2
 import numpy as np
 import time
-from Test.FaceDetectionModule import FaceDetector
+from FaceDetectionModule import FaceDetector
 
 
 class PID:
