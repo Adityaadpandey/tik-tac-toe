@@ -1,11 +1,11 @@
 import cv2
-from Test.HandTrackingModule import HandDetector
+from cvzone.HandTrackingModule import HandDetector
 import numpy as np
 import math
 import time
 
 cap = cv2.VideoCapture(-1)
-detector = HandDetector(maxHands=1)
+detector = HandDetector(maxHands=5)
 
 offset = 20
 imgSize = 300
@@ -13,6 +13,7 @@ imgSize = 300
 folder = "Data/Scissor"
 counter = 0
 
+# if name =
 while True:
     success, img = cap.read()
     hands, img = detector.findHands(img)
