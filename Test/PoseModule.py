@@ -142,6 +142,7 @@ def main():
     detector = PoseDetector()
     while True:
         success, img = cap.read()
+        img = cv2.flip(img, 1)
         img = detector.findPose(img)
         lmList, bboxInfo = detector.findPosition(img, bboxWithHands=False)
         if bboxInfo:
